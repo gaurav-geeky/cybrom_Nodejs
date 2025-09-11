@@ -6,8 +6,7 @@ newfile.open( "ranu.txt", "w", (err, file)=> {
     console.log("new file created.")
 } )
 
-// to open file 
+// open : opens file for writin    or    create new one. 
 // append   adds text 
 
-//  write file   create a new file if it is not
-//   or replace that existing file 
+//  write file   create a new file if it is not  or replace that existing file 

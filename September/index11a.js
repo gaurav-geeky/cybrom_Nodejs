@@ -5,6 +5,6 @@ fs.appendFile('shyam.txt', ' hello I am shyam younger brother of Shree Ram. __ r
     console.log('so new file is created...'); 
 })
 
-// aapend  to add text 
+// append (create) to add text 
 
 // open also to create file  but  1st to open it. 
