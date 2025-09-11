@@ -12,12 +12,9 @@ http.createServer( (req, res)=> {
     res.write("<h1 style='font-size: 30px; color: red;  '>" + indmod.mycollege() + "</h1>"); 
     res.write(`<h1> cybrom ki fees __ ${indmod.myfees()} <br>`) 
 
-    
     res.end("<br>now end"); 
 
 }).listen(8200, ()=> {
     console.log("server run successfully.")
 })
-
-
 
