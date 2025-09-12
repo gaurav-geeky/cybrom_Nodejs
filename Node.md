@@ -36,12 +36,31 @@ res.write()    // it takes only  1  parameter.
 
 
 
+12 sept, 
+
+# path and os in node js. 
+
+
+# path. basename
+
+
+# 1. path. join
+
+#  2. path extension.
+
+
+# 3.  path. resolve   :   
+resolves a sequence of paths or path segments into an absolute path, processing from right to left untill an absolute path is constructed. 
+
+
+when  we give  / dfsd    fjfj   dldl  
+then start from    dfsd     but if not then adds in   current directory. 
 
 
 
 
-
-
+# 4. path . parse() 
+returns an object whose properties represent significant elements of the path. 
 
 
 
