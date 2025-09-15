@@ -36,17 +36,19 @@ res.write()    // it takes only  1  parameter.
 
 
 
-12 sept, 
+# 12 sept, 
 
 # path and os in node js. 
 
 
-# path. basename
+# 0.  path. basename 
+returns the last portion of a path.
 
-
-# 1. path. join
+# 1. path. join 
+join all give path segments together using the plateform-specific separator   as a  delimiter, then normalizes the resulting path. 
 
 #  2. path extension.
+returns extension of a path ,  from the last occurrence  of the   .   character to the end of the string. 
 
 
 # 3.  path. resolve   :   
@@ -57,11 +59,11 @@ when  we give  / dfsd    fjfj   dldl
 then start from    dfsd     but if not then adds in   current directory. 
 
 
-
-
 # 4. path . parse() 
 returns an object whose properties represent significant elements of the path. 
 
+#  5.  path . format. 
+returns a path string from an object which is opposite of path parse. 
 
 
 

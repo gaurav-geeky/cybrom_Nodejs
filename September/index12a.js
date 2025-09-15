@@ -1,23 +1,22 @@
 const path = require('path');  
 
-// console.log(__dirname);  // gives directory name only. no need path
+console.log(__dirname);  // gives directory name only. no need path
 
-// console.log(__filename);  // gives file name only no need path. 
-
-
-// const joindir = path.join(__dirname, "new.txt"); 
-// console.log(joindir);  
-
-// const newjoin = path.join(__dirname, "gaurav.txt"); 
-// console.log(newjoin);
-
-// const mypath = path.join(__dirname, "photos", "uploads", "gaurav.txt"); 
-// console.log(mypath); 
+console.log(__filename);  // gives file name only no need path. 
 
 
-// const path1 = path.dirname(__filename); 
-// console.log(path1); 
+const joindir = path.join(__dirname, "new.txt"); 
+console.log(joindir);  
 
+const newjoin = path.join(__dirname, "gaurav.txt"); 
+console.log(newjoin);
+
+const mypath = path.join(__dirname, "photos", "uploads", "gaurav.txt"); 
+console.log(mypath); 
+
+
+const path1 = path.dirname(__filename); 
+console.log(path1); 
 
 
 
