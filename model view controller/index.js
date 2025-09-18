@@ -9,3 +9,4 @@ app.use("/teacher", teacherRoute);
 app.listen(8000, ()=> {
     console.log("our server of controller runs at 8000."); 
 })
+

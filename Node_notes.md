@@ -70,5 +70,10 @@ returns a path string from an object which is opposite of path parse.
 
 
 
+# open source software :  we can make app on these plateforms and earn money by selling it. 
+
+
+
+
 
 

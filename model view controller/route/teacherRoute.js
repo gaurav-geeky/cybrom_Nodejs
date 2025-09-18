@@ -11,6 +11,7 @@ route.get("/service", TeacherController.servicepage);
 
 route.get("/contact", TeacherController.contactpage); 
 
+
 module.exports = route; 
 
 
