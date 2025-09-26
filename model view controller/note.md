@@ -14,3 +14,9 @@ export it also
 # index file 
 export things from  router. 
 do the same this as we did in  Router 
+
+# to use mongo db  install  mongoose and body-parser (to convert data into JSON) . 
+
+
+
+
