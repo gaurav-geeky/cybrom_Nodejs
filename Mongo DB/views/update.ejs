@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student home</title>
+</head>
+
+<body bgcolor="lightpink" >
+    <h1>Welcome to our Student Management System.</h1>
+
+    <a href="/"> Home </a>  | 
+    <a href="/insert"> Insert </a>  |
+    <a href="/display"> Display </a>    |
+    <a href="/search"> Search </a>  | 
+    <a href="/update"> Update </a>
+
+
+    <h2> Update page here   data can be delete or edit ...</h2>
+
+    <table border="1">
+        <tr>
+            <th> Roll no. </th>
+            <th> Name </th>
+            <th> City</th>
+            <th> Fees </th>
+            <th> Edit / Delete </th>
+        </tr>
+
+        <% 
+        Stu.forEach( (key) => { 
+            %>
+        <tr>
+            <td> <%=  key.rollno %> </td>
+            <td> <%=  key.name %> </td>
+            <td> <%=  key.city %> </td>
+            <td> <%=  key.fees %> </td> 
+            <td> 
+                <a href="/dataedit?id=<%= key._id %>"> Edit </a>
+                <a href="/datadelete?id=<%= key._id %>"> Delete </a>
+                
+            </td> 
+        </tr> 
+            <% 
+        })
+        %>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit page </title>
+</head>
+<body bgcolor="lightpink" >
+    <h1>Welcome to our Student Management System.</h1>
+
+    <a href="/"> Home </a>  | 
+    <a href="/insert"> Insert </a>  |
+    <a href="/display"> Display </a>    |
+    <a href="/search"> Search </a>  | 
+    <a href="/update"> Update </a> 
+
+    <h2>Edit student's data here....</h2>
+    
+    <form action="/editsave" method="post">
+        
+        <input type="hidden" name="id" value="<%= Data.id %>">
+
+        Enter Roll No. : <input type="text" name="rollno" value="<%= Data.rollno %> ">
+        <br> <br> 
+        Enter Name : <input type="text" name="name" value="<%= Data.name %> ">
+        <br> <br> 
+        Enter City : <input type="text" name="city" value="<%= Data.city %> "> 
+        <br> <br> 
+        Enter Fees : <input type="text" name="fees" value="<%= Data.fees %> "> 
+        <br> <br> 
+        <button> Save edit !! </button>
+    </form>
+    
+</body>
+</html>
