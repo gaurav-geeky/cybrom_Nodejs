@@ -66,14 +66,14 @@ returns an object whose properties represent significant elements of the path.
 returns a path string from an object which is opposite of path parse. 
 
 
-
-
-
+# 18 sept, 2025 revision 
 
 # open source software :  we can make app on these plateforms and earn money by selling it. 
 
 
+v8 engine : software to run js on browser. 
 
+cross application : 
 
 
 
