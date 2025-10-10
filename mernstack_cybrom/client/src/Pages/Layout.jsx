@@ -8,6 +8,8 @@ function Layout() {
                 <Link className=" text-xl " to="/about"> About </Link>
                 <Link className=" text-xl " to="/form"> Form </Link>
                 <Link className=" text-xl " to="/display"> Display </Link>
+                <Link className=" text-xl " to="/search"> Search </Link>
+                <Link className=" text-xl " to="/update"> Update </Link>
             </nav>
             <Outlet />
 

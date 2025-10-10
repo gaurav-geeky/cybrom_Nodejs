@@ -6,6 +6,10 @@ const stuController = require('../controllers/stuController')
 route.get('/home', stuController.homePg)
 route.post('/save', stuController.savePg)
 route.get('/display', stuController.displayPg)
+route.post('/search', stuController.dataSearch)
+
+route.get('/updatedata', stuController.updateDisplay)
+route.delete('/updatedelete', stuController.updateDelete)
 
 module.exports = route; 
 

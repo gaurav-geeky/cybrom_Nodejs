@@ -21,9 +21,31 @@ const displayPg = async (req, res) => {
     res.send(myData);
 }
 
+const dataSearch = async (req, res) => {
+    const { rollno } = req.body;
+    const student = await stuModel.find({ rollno: rollno })
+    console.log(student);
+    res.send(student);
+}
+
+const updateDisplay = async (req, res) => {
+    const Student = await stuModel.find();
+    res.send(Student);
+}
+
+const updateDelete = async (req, res) => {
+    const { id } = req.query;
+    const Student = await stuModel.findByIdAndDelete(id);
+    res.send({ msg: "Data delete successfully.." });
+}
+
 module.exports = {
     homePg,
     savePg,
     displayPg,
+    dataSearch,
+    updateDisplay,
+    updateDelete,
+
 }
 
