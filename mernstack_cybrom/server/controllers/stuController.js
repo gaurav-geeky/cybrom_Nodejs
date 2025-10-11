@@ -39,6 +39,24 @@ const updateDelete = async (req, res) => {
     res.send({ msg: "Data delete successfully.." });
 }
 
+const editData = async (req, res) => {
+    const { id } = req.params;
+    const stData = await stuModel.findById(id);
+    console.log(stData);
+    res.send(stData);
+}
+
+const editSave = async (req, res) => {
+    const { _id, name, rollno, city, fees } = req.body;
+    const stData = await stuModel.findByIdAndUpdate(_id, {
+        name: name,
+        rollno: rollno,
+        city: city,
+        fees: fees,
+    })
+    res.send({ msg: "data saved succesfully ... " }); 
+}
+
 module.exports = {
     homePg,
     savePg,
@@ -46,6 +64,8 @@ module.exports = {
     dataSearch,
     updateDisplay,
     updateDelete,
+    editData,
+    editSave,
 
 }
 

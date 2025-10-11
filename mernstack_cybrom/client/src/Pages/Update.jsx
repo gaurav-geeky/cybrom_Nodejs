@@ -1,10 +1,11 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Update() {
 
     const [mydata, setMydata] = useState([]);
+    let navigate = useNavigate();
 
     const loadData = async () => {
         let api = "http://localhost:9500/updatedata"
@@ -17,11 +18,16 @@ function Update() {
         loadData();
     }, [])
 
-    const myDel = async (id)=> {
-        let api = `http://localhost:9500/updatedelete?id=${id}` 
-        const response = await axios.delete(api); 
-        alert(response.data.msg); 
-        loadData(); 
+    const myDel = async (id) => {
+        let api = `http://localhost:9500/updatedelete?id=${id}`
+        const response = await axios.delete(api);
+        alert(response.data.msg);
+        loadData();
+    }
+
+    let myEdit = async (id) => {
+        navigate(`/edit/${id}`)
+        console.log("ok id come to edit pg.")
     }
 
     const ans = mydata.map((key) => {
@@ -33,13 +39,14 @@ function Update() {
                     <td> {key.city} </td>
                     <td> {key.fees} </td>
                     <td >
+                        <a className=' text-red-500' href="#" onClick={() => { myEdit(key._id) }}> Edit me </a>
+                        &ensp;
                         <a className=' text-red-500' href="#" onClick={() => { myDel(key._id) }}> Deleter </a>
                     </td>
                 </tr>
             </>
         )
     });
-
 
     return (
         <>
@@ -62,4 +69,4 @@ function Update() {
     )
 }
 
-export default Update
+export default Update; 

@@ -6,6 +6,7 @@ import Form from "./Pages/Formdata"
 import Display from "./Pages/Display"
 import Search from "./Pages/Search"
 import Update from "./Pages/Update"
+import Edit from "./Pages/Edit"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/display" element={<Display />} /> 
             <Route path="/search" element={<Search />} /> 
             <Route path="/update" element={<Update />} /> 
+            <Route path="/edit/:id" element={<Edit />} /> 
 
           </Route>
         </Routes>

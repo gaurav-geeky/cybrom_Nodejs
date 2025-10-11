@@ -10,6 +10,7 @@ function Layout() {
                 <Link className=" text-xl " to="/display"> Display </Link>
                 <Link className=" text-xl " to="/search"> Search </Link>
                 <Link className=" text-xl " to="/update"> Update </Link>
+                <Link className=" text-xl " to="/edit"> Edit </Link>
             </nav>
             <Outlet />
 

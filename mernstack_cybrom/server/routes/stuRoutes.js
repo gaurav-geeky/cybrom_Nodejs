@@ -11,5 +11,9 @@ route.post('/search', stuController.dataSearch)
 route.get('/updatedata', stuController.updateDisplay)
 route.delete('/updatedelete', stuController.updateDelete)
 
+route.get('/editdisplay/:id', stuController.editData); 
+route.post('/editsave', stuController.editSave); 
+
+
 module.exports = route; 
 
