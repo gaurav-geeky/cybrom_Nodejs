@@ -13,7 +13,7 @@ const savePg = async (req, res) => {
         city: city,
         fees: fees,
     });
-    res.send("Data saved successfully...");
+    res.send("Data saved successfully in backend...");
 }
 
 const displayPg = async (req, res) => {

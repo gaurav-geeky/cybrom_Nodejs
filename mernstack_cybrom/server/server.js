@@ -4,10 +4,10 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose');  
 const stuRoute = require('./routes/stuRoutes'); 
 const cors = require('cors');  
+require("dotenv").config(); 
+ 
 
-const PORT = 9500; 
-
-mongoose.connect("mongodb://127.0.0.1:27017/StuDatafromReact").then( ()=> {
+mongoose.connect(process.env.DBCONN).then( ()=> {
     console.log("DB Mongoose connected successfully.."); 
 })
 
@@ -17,6 +17,10 @@ app.use(bodyparser.json());
  
 app.use("/", stuRoute);
 
-app.listen(PORT, () => {
-    console.log(`Server running at  port.. ${PORT}`);
+const port = process.env.PORT
+
+app.listen(port, () => {
+    console.log(`Server running at  port.. ${port}`);
 }) 
+
+

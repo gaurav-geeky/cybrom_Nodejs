@@ -8,7 +8,7 @@ function Display() {
     const [mydata, setMydata] = useState([]);
 
     const loadData = async () => {
-        let api = "http://localhost:9500/display"
+        let api = `${import.meta.env.VITE_BACKEND_URL}/display`
         const response = await axios.get(api);
         console.log(response.data);
         setMydata(response.data);

@@ -8,7 +8,7 @@ function Search() {
     const [mydata, setMydata] = useState([])
 
     const handelSubmit = async () => {
-        let api = "http://localhost:9500/search";
+        let api = `${import.meta.env.VITE_BACKEND_URL}/search`;
         const response = await axios.post(api, { rollno: rollno })
         console.log(response.data);
         setMydata(response.data);
@@ -33,24 +33,27 @@ function Search() {
 
                 <h1> Search data here..</h1>
                 Enter Roll No :
-                <input
+                <input 
                     className='border-1' type="text"
                     name='rollno' value={rollno}
-                    onChange={(e) => setRollno(e.target.value)} />
+                    onChange={(e) => setRollno(e.target.value)}
+                />
 
-                <button onClick={handelSubmit}>Search it</button>
+                <button className='border-1 text-red-500 font-bold bg-amber-300 ml-2' onClick={handelSubmit}>Search it</button>
 
                 <hr />
 
-                <table className='border-1 text-center w-100 m-8 ml-auto mr-auto'>
-                    <tr >
-                        <th> Roll No. </th>
-                        <th> Name</th>
-                        <th> City</th>
-                        <th> Fees</th>
-                    </tr>
-                    {ans}
-                </table>
+                {mydata.length > 0 &&
+                    <table className='border-1 text-center w-100 m-8 ml-auto mr-auto'>
+                        <tr >
+                            <th> Roll No. </th>
+                            <th> Name</th>
+                            <th> City</th>
+                            <th> Fees</th>
+                        </tr>
+                        {ans}
+                    </table>
+                }
 
             </div>
         </>

@@ -8,7 +8,7 @@ function Update() {
     let navigate = useNavigate();
 
     const loadData = async () => {
-        let api = "http://localhost:9500/updatedata"
+        let api = `${import.meta.env.VITE_BACKEND_URL}/updatedata`
         const response = await axios.get(api);
         console.log(response.data);
         setMydata(response.data);
@@ -19,7 +19,7 @@ function Update() {
     }, [])
 
     const myDel = async (id) => {
-        let api = `http://localhost:9500/updatedelete?id=${id}`
+        let api = `${import.meta.env.VITE_BACKEND_URL}/updatedelete?id=${id}`
         const response = await axios.delete(api);
         alert(response.data.msg);
         loadData();

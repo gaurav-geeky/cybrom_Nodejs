@@ -9,7 +9,7 @@ function Edit() {
     const [mydata, setMydata] = useState({});
 
     const loadData = async () => {
-        let api = `http://localhost:9500/editdisplay/${id}`;
+        let api = `${import.meta.env.VITE_BACKEND_URL}/editdisplay/${id}`;
         const response = await axios.get(api);
         console.log("data to be change : ", response.data);
         setMydata(response.data);
@@ -25,7 +25,7 @@ function Edit() {
         console.log("updated data : ", mydata);
     }
     const handleSubmit = async () => {
-        let api = "http://localhost:9500/editsave";
+        let api = `${import.meta.env.VITE_BACKEND_URL}/editsave`;
         const response = await axios.post(api, mydata);
         alert(response.data.msg);
     }
