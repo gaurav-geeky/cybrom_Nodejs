@@ -1,11 +1,13 @@
+
+
 # connection string mongo db atlas 
 
 mongodb+srv://gauravnegigeeky_db_user:BygAf3mCRGnt5KJp@cluster0.2uhh1hy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0  
 # sometime server disconnect due to differenet Network IP address
 
-# 
+# PROJECT  -->  CLUSTER   -->   browse collection  -->   DB
 
-# ENV VARIABLE  .env  
+# ENV VARIABLE  .env
 
 # in server we need to install  npm i dotenv 
 then make   .env   file here important  information only. 

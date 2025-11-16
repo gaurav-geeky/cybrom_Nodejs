@@ -54,7 +54,7 @@ const editSave = async (req, res) => {
         city: city,
         fees: fees,
     })
-    res.send({ msg: "data saved succesfully ... " }); 
+    res.send({ msg: "data saved succesfully ... " });
 }
 
 module.exports = {

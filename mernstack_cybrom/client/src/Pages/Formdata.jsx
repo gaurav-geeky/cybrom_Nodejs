@@ -14,6 +14,7 @@ function Form() {
         e.preventDefault()
         let api = `${import.meta.env.VITE_BACKEND_URL}/save`
         const resp = await axios.post(api, data);
+        console.log(data); 
         alert(resp.data);
     }
 
