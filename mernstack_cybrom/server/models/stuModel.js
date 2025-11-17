@@ -7,6 +7,6 @@ const stuSchema = new mongoose.Schema({
     fees: Number,
 })
 
-module.exports = mongoose.model("student", stuSchema); 
+module.exports = mongoose.model("stuCrud", stuSchema); 
 
 
