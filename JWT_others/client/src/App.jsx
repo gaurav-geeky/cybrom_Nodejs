@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import UserDashboard from "./pages/UserDashboard";
 import Multer from "./pages/Multer";
 import Image from "./pages/Image";
-import MultipleFiles from "./pages/MultipleFiles";
 
 
 const App = () => {
@@ -21,7 +20,6 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="multer" element={<Multer />} />
           <Route path="image" element={< Image />} />
-          <Route path="multiplefile" element={< MultipleFiles />} />
 
         </Route>
       </Routes>

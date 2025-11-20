@@ -9,8 +9,6 @@ route.post("/registration", StuController.StuRegister);
 route.post("/login", StuController.StuLogin); 
 route.post("/userauth", StuController.userAuth); 
 
-// multiple file upload ++
-route.post("/multiplefiles", StuController.MultipleFile); 
 
 
 module.exports = route; 

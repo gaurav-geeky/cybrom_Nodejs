@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const bodyparser = require('body-parser');
 const StuRoute = require("./routes/stuRoute");
+
 const multer = require("multer"); //           multer file upload
 
 
@@ -19,7 +20,9 @@ app.use(bodyparser.json())
 
 app.use(cors());
 
+// middleware ..
 app.use("/students", StuRoute);
+
 
 
 // Configure multer storage  
@@ -72,7 +75,7 @@ app.post("/multer", upImg.single("mydata"), (req, res) => {
 
 /////////// 
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8999;
 
 app.listen(port, () => {
   console.log(`server run on port ${port}`);

@@ -8,7 +8,6 @@ const Layout = () => {
             <Link to="login">Login</Link> | &emsp; &emsp; 
             <Link to="multer">Multer</Link> |
             <Link to="image">Image jsx</Link> |
-            <Link to="multiplefile"> Multiple_upload </Link> |
 
             <hr />
 

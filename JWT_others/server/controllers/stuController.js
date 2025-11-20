@@ -1,7 +1,9 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const stuModel = require("../models/stuModel")
+const stuModel = require("../models/stuModel");
 
+
+//
 const homepg = (req, res) => {
     res.send("home page ");
 }
@@ -69,12 +71,7 @@ const userAuth = async (req, res) => {
     res.status(200).send({ user: user, msg: "ok token is verified !!" });
 }
 
-// MultipleFile in cloudanary,  text will be in DB 
 
-const MultipleFile = async (req, res) => {
-    console.log(req.body);
-    res.send("Data save!");
-}
 
 
 module.exports = {
@@ -82,7 +79,6 @@ module.exports = {
     StuRegister,
     StuLogin,
     userAuth,
-    MultipleFile,
 
 }
 
