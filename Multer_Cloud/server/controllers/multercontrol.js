@@ -41,13 +41,20 @@ const Multiupload = async (req, res) => {
         })
         console.log("okk it is running cloud name issue tha..")
 
+        res.send("data save!");
     }
     );
-    res.send("data save!");
+}
+
+const DisplayMulti = async (req, res) => {
+    const multi = await multiModel.find(); 
+    res.send({info: multi, msg: "Okk got cloud data."}); 
 }
 
 
 module.exports = {
     Home,
-    Multiupload
+    Multiupload,
+    DisplayMulti,
+
 }

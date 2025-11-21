@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Multer from "./pages/Multer";
 import Image from "./pages/Image";
 import MultipleFiles from "./pages/MultipleFiles";
+import DisplayMulti from "./pages/DisplayMulti";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="multer" element={<Multer />} />
           <Route path="image" element={< Image />} />
           <Route path="multiplefile" element={< MultipleFiles />} />
+          <Route path="displaymulti" element={< DisplayMulti />} />
 
         </Route>
       </Routes>

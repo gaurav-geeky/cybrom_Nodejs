@@ -6,6 +6,7 @@ const Layout = () => {
             <Link to="multer">Multer</Link> |
             <Link to="image">Image jsx</Link> |
             <Link to="multiplefile"> Multiple_upload </Link> |
+            <Link to="displaymulti"> Multi_Display </Link> |
 
             <hr />
 
